@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Mingzat&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: #e8e8e8;
+}
+
+.navbar {
+  font-family: 'Finlandica';
+  color: #000000;
+  padding: 1rem 3rem;
+  padding-top: 2.6rem;
+  display: flex;
+  justify-content: space-between;
+  .navbar__title {
+    font-weight: bold;
+  }
+
+  .navbar__links {
+    display: flex;
+    a {
+      color: #000000;
+      text-decoration: none;
+      margin: 0 0.6rem;
+      font-weight: bold;
+      --b: 0.1em; /* the thickness of the line */
+      --c: #df9696; /* the color */
+
+      color: #0000;
+      padding-block: var(--b);
+      background: linear-gradient(var(--c) 50%, #000 0) 0%
+          calc(100% - var(--_p, 0%)) / 100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+          no-repeat;
+      -webkit-background-clip: text, padding-box;
+      background-clip: text, padding-box;
+      transition: 0.3s var(--_s, 0s) linear,
+        background-size 0.3s calc(0.3s - var(--_s, 0s));
+    }
+    a:hover {
+      --_p: 100%;
+      --_s: 0.3s;
+    }
+  }
+}
+
+.body__container {
+  .body__name {
+    font-size: 3rem;
+    padding: 3rem 3rem;
+    padding-bottom: 2rem;
+    .first {
+      margin: 0;
+      padding: 0;
+      line-height: 4rem;
+      font-size: 4rem;
+      font-weight: 400;
+    }
+  }
+  .body__image {
+    padding: 0rem 3rem;
+    img {
+      width: 30vw;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+  .body__detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .left {
+      padding: 5rem 3rem;
+      p {
+        font-family: 'Finlandica';
+        font-weight: light;
+        width: 70%;
+        font-size: 1.43rem;
+        line-height: 2.4rem;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      img {
+        width: 150px;
+      }
+    }
+  }
+}

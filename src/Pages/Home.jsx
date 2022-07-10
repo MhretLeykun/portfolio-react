@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-// import ripplesBackgrounds from '../components/ripplesBackgrounds';
+import Navbar from '../components/Navbar';
 import '../assets/Home.scss';
 import web from '../assets/pexels-miguel-á-padriñán-1591060.jpg';
 import scroll from '../assets/scroll.png';
@@ -13,22 +13,8 @@ export default function Home() {
         <div class='circle mediun shade4'></div>
         <div class='circle small shade5'></div>
       </div>
-      <div className='navbar'>
-        <div className='navbar__title'> Mhret Moges</div>
-        <div className='navbar__job'>
-          Currently Junior front end developer,
-          <br /> from A.A
-        </div>
-        <div className='navbar__country'>
-          Based in Ethiopia, <br /> Addis Ababa
-        </div>
-        <div className='navbar__links'>
-          <Link to='/'>Work</Link>
-          <Link to='/'>About</Link>
-          <Link to='/'>Contact</Link>
-        </div>
-      </div>
 
+      <Navbar />
       <div className='body__container'>
         <div className='body__name'>
           <p className='first'>

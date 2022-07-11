@@ -3,6 +3,7 @@
   top: 3rem;
   left: 3rem;
   position: fixed;
+  font-family: 'Finlandica';
   button {
     border: none;
     background: none;
@@ -28,43 +29,47 @@
     }
   }
   .right {
-    .project {
-      width: 65%;
-      height: 30vh;
-      margin: 3rem 0;
-      background: #959595;
-      font-family: 'Finlandica';
-      color: white;
-      padding: 3rem;
-      h3 {
-        margin-bottom: 1.4rem;
-      }
-      p {
-        margin-bottom: 1.4rem;
-      }
-      a {
-        margin-top: 6rem;
-        color: #000000;
-        text-decoration: none;
-        font-weight: bold;
-        --b: 0.1em; /* the thickness of the line */
-        --c: #ffc1c1; /* the color */
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .card {
+      background: url('../assets/charlesdeluvio-jtmwD4i4v1U-unsplash.jpg');
+      background-size: cover;
+      height: 280px;
 
-        color: #0000;
-        // padding-block: var(--b);
-        background: linear-gradient(var(--c) 50%, rgb(255, 255, 255) 0) 0%
-            calc(100% - var(--_p, 0%)) / 100% 200%,
-          linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%)
-            var(--b) no-repeat;
-        -webkit-background-clip: text, padding-box;
-        background-clip: text, padding-box;
-        transition: 0.3s var(--_s, 0s) linear,
-          background-size 0.3s calc(0.3s - var(--_s, 0s));
-      }
-      a:hover {
-        --_p: 100%;
-        --_s: 0.3s;
+      box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.751);
+      width: 60%;
+      position: relative;
+      .card__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2rem 2rem;
+        color: white;
+        font-family: 'Finlandica';
+        .card__image {
+          img {
+            width: 60px;
+          }
+        }
+        .card__details {
+          p {
+            margin: 10px 10px;
+          }
+        }
       }
     }
+  }
+}
+
+.next {
+  position: fixed;
+  bottom: 3rem;
+  z-index: 9999;
+  right: 3rem;
+  img {
+    width: 20px;
   }
 }
